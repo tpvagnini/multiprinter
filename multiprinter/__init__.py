@@ -14,6 +14,10 @@ import octoprint.plugin
 class MultiprinterPlugin(octoprint.plugin.SettingsPlugin,
                          octoprint.plugin.AssetPlugin,
                          octoprint.plugin.TemplatePlugin):
+    #TemplatePlugin code added by automatically
+    def on_afer_startup(self):
+        self._logger.info("Hello World!")
+
 
 	##~~ SettingsPlugin mixin
 
@@ -69,4 +73,3 @@ def __plugin_load__():
 	__plugin_hooks__ = {
 		"octoprint.plugin.softwareupdate.check_config": __plugin_implementation__.get_update_information
 	}
-
