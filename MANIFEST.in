@@ -1,0 +1,4 @@
+include README.md
+recursive-include multiprinter/templates *
+recursive-include multiprinter/translations *
+recursive-include multiprinter/static *
